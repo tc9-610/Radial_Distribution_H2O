@@ -1,16 +1,3 @@
-'''
-import math
-
-d = math.radians(104.45)
-
-for i in range (0, 25, 2):
-    for j in range (0, 25, 2):
-        for k in range (0, 25, 2):
-            print ('O', i, j, k)
-            print ('H', i + 0.94, j, k)
-            print ('H', round(i + 0.95 * math.cos(d)), round(j + 0.95 * math.sin(d)), k)
-'''
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -70,36 +57,9 @@ ideal_p.pop()
 #print(ideal_p, dist)
 
 g_r = hist/ideal_p
-#print(g_r)
-#for i in range(len(dist_r)):
-#    for j in range(i+1, len(dist_r)):
-#       if i == j:
-           
-
-
-#print(p)       
-
-#print (box_size)
-#print (diff)
-#step = len(dist_r)
-#dist = np.arange(0, box_size, (box_size/step))
-#plt.plot(dist_r, dist,linewidth = 2.0)
-
 
 plt.plot(dist, g_r)
 plt.xlabel('dist_oo')
 plt.ylabel('g(r)')
 plt.title('radial')
 plt.show()
-
-'''
-distance = []
-for i in range(len(ox)):
-    for j in range(len(ox)):
-        diff = ox_cor[i] - ox_cor[j]
-        dist = np.sqrt(diff ** 2)
-        distance.append(dist)
-print (distance)
-plt.plot(distance, ox)
-plt.show()
-'''
